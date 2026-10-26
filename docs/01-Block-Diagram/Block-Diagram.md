@@ -1,24 +1,10 @@
 ---
 title: Individal Block Diagram
 tags:
-- tag1
-- tag2
+
 ---
 
 ## Overview
-This needs to be updated with a brief purpose for having the block diagram.
-Things to mention are:
-* power levels
-* sensor
-* Actuator
-* team connections
-* Power source
-* ...
+I’m Mateo, and my part is the microphone input. The signal starts at a CUI Devices electret microphone. It’s small and cheap, but its output is only millivolts, so it goes into an MCP6004 op amp. I chose that op amp because it’s rail-to-rail, runs from 3.3 volts, and has four amplifiers in one chip, so I use one and have spares. The amplified signal goes to pin RA0, the ADC on the PIC18F57Q43, which turns sound into numbers. I send those numbers out over UART. I chose UART because it needs only TX, RX and ground, it’s built into the Curiosity Nano, and it connects straight to Sultan’s board through connector 1. I also have a push button on RC4 and a test LED on RA1.
 
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.
-
-
-## Example Block Diagram 
-Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.
-
-![My Block Diagram ](mateodelgado-block-diagram.drawio.png)
+![My Block Diagram ](blockdiagram.png)
