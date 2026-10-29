@@ -26,7 +26,7 @@
 
     
       
-        <title>Component Selection Example - EGR 304 Mateo Delgado Data Sheet</title>
+        <title>Component Selection - EGR 304 Mateo Delgado Data Sheet</title>
       
     
     
@@ -89,11 +89,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#examples" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -125,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Component Selection Example
+              Component Selection
             
           </span>
         </div>
@@ -513,76 +508,15 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Component Selection Example
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Component Selection Example
+    Component Selection
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -808,47 +742,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -870,15 +763,10 @@
   
 
 
-  <h1>Component Selection Example</h1>
+  <h1>Component Selection</h1>
 
-<h2 id="examples">Examples</h2>
-<h3 id="style-1">Style 1</h3>
-<blockquote>
-<p>This is the example found in the assignment, uses more html</p>
-</blockquote>
-<p><em>Table 1: Example component selection</em></p>
-<p><strong>External Clock Module</strong></p>
+<p>*Table 1: DAC Component Selection</p>
+<p><strong>Digital-to-Analog Converter (DAC) — Individual Subsystem</strong></p>
 <table>
 <thead>
 <tr>
@@ -889,88 +777,69 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a><br>Option 1.<br> XC1259TR-ND surface mount crystal<br>$1/each<br><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></td>
-<td>* Inexpensive[^1]<br>* Compatible with PSoC<br>* Meets surface mount constraint of project</td>
-<td>* Requires external components and support circuitry for interface<br>* Needs special PCB layout.</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../pic.png" data-desc-position="bottom"><img alt="" src="../pic.png"></a><br>Option 1.<br> PIC18F57Q43 Internal 8-bit DAC<br>No additional cost<br><a href="https://www.microchip.com/en-us/product/pic18f57q43">Link to product</a></td>
+<td>* No additional cost<br>* 8-bit output enough for speech<br>* No SPI Communication required</td>
+<td>* No Dedicated High-Resolution Audio ADC<br>* Limited Processing Horsepower for DSP<br>* RAM Constraints for Audio Buffering</td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image3.png" data-desc-position="bottom"><img alt="" src="../image3.png"></a><br>* Option 2. <br>* CTX936TR-ND surface mount oscillator <br>* $1/each <br>* <a href="http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940">Link to product</a></td>
-<td>* Outputs a square wave <br>* Stable over operating temperature <br> * Direct interface with PSoC (no external circuitry required) range</td>
-<td>* More expensive <br>* Slow shipping speed</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../dacoption2.jpg" data-desc-position="bottom"><img alt="" src="../dacoption2.jpg"></a><br>* Option 2. <br>* Texas Instruments DAC7512 <br>* $7/each <br>* <a href="https://www.ti.com/product/DAC7512">Link to product</a></td>
+<td>* Excellent Audio Fidelity (12-Bit Resolution)<br>* Rapid Serial Communication (Up to 30 MHz) <br> * Glitch-Free Power-On Initialization</td>
+<td>* More expensive <br>* No Breadboard-Friendly DIP Packages<br> * Requires a Completely Custom Software Driver</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
-<p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
-<h3 id="style-2">Style 2</h3>
-<blockquote>
-<p>Also acceptable, more markdown friendly</p>
-</blockquote>
-<p><strong>External Clock Module</strong></p>
-<ol>
-<li>
-<p>XC1259TR-ND surface mount crystal</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
-<ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></li>
-</ul>
+<p><strong>Choice:</strong> Option 2: Texas Instruments DAC7512</p>
+<p><strong>Rationale:</strong> The PIC18F57Q43's internal 8-bit DAC is the best fit for this project. We already own the microcontroller board, so using its built-in peripheral adds no cost and no shipping or lead-time risk. Eight bits is sufficient for speech-quality audio, and the on-chip DAC removes the need for an SPI driver and extra wiring, which keeps both the firmware and the board layout simple. The DAC7512 would offer higher resolution (12-bit) and a buffered output, but that improvement is not needed for voice, and it would add cost, a custom driver, and delivery delays. The main tradeoff is a higher quantization noise floor, which is acceptable for this application.</p>
+<p><em>Table 2: Microphone Component Selection</em></p>
+<p><strong>Microphone — Individual Subsystem</strong></p>
 <table>
 <thead>
 <tr>
-<th>Pros</th>
-<th>Cons</th>
+<th><strong>Solution</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Inexpensive</td>
-<td>Requires external components and support circuitry for interface</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../mic1.jpg" data-desc-position="bottom"><img alt="" src="../mic1.jpg"></a><br>* Option 1. <br>* CUI Devices CMC-6027-24T Electret Microphone<br>* Low cost (verify price)<br>* <a href="https://www.cuidevices.com/product/audio/microphones/electret-condenser-microphones/cmc-6027-24t">Link to product</a></td>
+<td>* Low cost<br>* Small 6 mm through-hole form factor<br>* Analog output works directly with the PIC's ADC<br>* Simple to prototype and solder</td>
+<td>* Output signal is very small and needs amplification<br>* Needs a bias resistor and DC-blocking capacitor<br>* Analog signal is susceptible to noise</td>
 </tr>
 <tr>
-<td>Compatible with PSoC</td>
-<td>Needs special PCB layout.</td>
-</tr>
-<tr>
-<td>Meets surface mount constraint of project</td>
-<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../mic2.jpg" data-desc-position="bottom"><img alt="" src="../mic2.jpg"></a><br>* Option 2. <br>* Adafruit MAX9814 Microphone Amplifier Breakout<br>* About $8/each (verify price)<br>* <a href="https://www.adafruit.com/product/1713">Link to product</a></td>
+<td>* Built-in amplifier with automatic gain control<br>* Higher output level, so less external circuitry<br>* Ready to use on a breadboard</td>
+<td>* More expensive<br>* Automatic gain control can distort or pump the audio<br>* Hides the amplifier stage we are supposed to design</td>
 </tr>
 </tbody>
 </table>
-</li>
-<li>
-<p>CTX936TR-ND surface mount oscillator</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image3.png" data-desc-position="bottom"><img alt="" src="../image3.png"></a></p>
-<ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940">Link to product</a></li>
-</ul>
+<p><strong>Choice:</strong> Option 1: CUI Devices CMC-6027-24T Electret Microphone</p>
+<p><strong>Rationale:</strong> The CMC-6027-24T is selected because it is inexpensive, small, and gives a plain analog signal that the PIC18F57Q43's ADC can read once it is amplified. Its output is small, so it pairs with the MCP6004 amplifier stage in the next table, and the extra bias and coupling components are cheap and easy to add. The MAX9814 breakout is more convenient, but it costs more and its built-in gain stage would replace the amplifier circuit that this subsystem is meant to design. The main tradeoff is added circuit complexity and noise sensitivity, which we address with proper decoupling and filtering before the ADC input.</p>
+<p><em>Table 3: Amplifier Component Selection</em></p>
+<p><strong>Operational Amplifier — Individual Subsystem</strong></p>
 <table>
 <thead>
 <tr>
-<th>Pros</th>
-<th>Cons</th>
+<th><strong>Solution</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Outputs a square wave</td>
-<td>More expensive</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../amp1.jpg" data-desc-position="bottom"><img alt="" src="../amp1.jpg"></a><br>* Option 1. <br>* Microchip MCP6004 Quad Op Amp<br>* Low cost (verify price)<br>* <a href="https://www.microchip.com/en-us/product/mcp6004">Link to product</a></td>
+<td>* Rail-to-rail input and output<br>* Runs from 1.8 V to 6 V, compatible with the 3.3 V supply<br>* Low power consumption<br>* Spare op amps available for filtering</td>
+<td>* Gain-bandwidth of about 1 MHz limits very high gain<br>* Four amplifiers in one package, so most go unused<br>* Higher input noise than precision audio op amps</td>
 </tr>
 <tr>
-<td>Stable over operating temperature</td>
-<td>Slow shipping speed</td>
-</tr>
-<tr>
-<td>Direct interface with PSoC (no external circuitry required) range</td>
-<td></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../amp2.jpg" data-desc-position="bottom"><img alt="" src="../amp2.jpg"></a><br>* Option 2. <br>* Texas Instruments LM358 Dual Op Amp<br>* Low cost (verify price)<br>* <a href="https://www.ti.com/product/LM358">Link to product</a></td>
+<td>* Very common and easy to find<br>* Through-hole DIP package is breadboard-friendly<br>* Wide supply range</td>
+<td>* Output cannot swing to the positive rail<br>* Poor performance at a 3.3 V supply<br>* Higher power consumption</td>
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
-<p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
-<p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
+<p><strong>Choice:</strong> Option 1: Microchip MCP6004 Quad Op Amp</p>
+<p><strong>Rationale:</strong> The MCP6004 is selected because it operates from the same 3.3 V supply as the PIC18F57Q43 and has rail-to-rail input and output, so the amplified microphone signal can use the full 0 to 3.3 V range of the ADC. Its low power draw suits a small battery-style design, and the extra amplifiers in the package give us room to add a filter stage if needed. The LM358 is easier to find in a DIP package, but its output cannot reach the supply rails and it does not perform well at 3.3 V. The tradeoff is a modest gain-bandwidth product, which is more than enough for speech frequencies.</p>
 
 
 

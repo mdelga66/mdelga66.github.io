@@ -861,12 +861,14 @@
   <h1>Power Budget</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Power budget</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../powerbudget.png" data-desc-position="bottom"><img alt="budget1" height:_300_="height:&quot;300;&quot;" src="../powerbudget.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
+<p>A power budget was created to determine the current requirements of the microphone subsystem and verify that the selected power supply can safely support the complete circuit. The board uses a single 3.3 V power rail supplied by an external DC power supply, which provides the voltage directly to the circuit. Current requirements were estimated for the MCP6004 operational amplifier and the CMC-6027-24T electret microphone. The DAC is the PIC18F57Q43’s internal 8-bit DAC, so it is part of the microcontroller and does not add a separate load.</p>
+<p>The estimated maximum current consumption of these components is approximately 0.9 mA. A 25% safety margin was added to account for variations in component current consumption and operating conditions, resulting in a design requirement of approximately 1.13 mA on the 3.3 V rail. This value was then compared with the 500 mA rating of the external power supply to verify that sufficient current capacity is available.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../powerbudget2.png" data-desc-position="bottom"><img alt="budget1" height:_300_="height:&quot;300;&quot;" src="../powerbudget2.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
 <h2 id="conclusions">Conclusions</h2>
-<p>From the prepare Power Budget, .....</p>
+<p>The completed power budget indicates that the microphone subsystem can operate from a single 3.3 V power rail supplied by an external DC power supply. After applying the 25% safety margin, the calculated maximum current requirement is approximately 1.13 mA. The power supply is rated for up to 500 mA, leaving approximately 498.9 mA of current capacity beyond the calculated design requirement.</p>
+<p>Because the subsystem draws only a small fraction of the available current, no additional voltage regulator is required. The CMC-6027-24T electret microphone represents the largest portion of the estimated current consumption, followed by the MCP6004 operational amplifier. The power budget demonstrates that the selected supply provides adequate current capacity, although the actual current consumption should be measured during subsystem verification to confirm the design estimates.</p>
 <h2 id="resouces">Resouces</h2>
-<p>The power budget as a PDF download is available <a href="../powerbudget.pdf"><em>here</em></a>, and a Microsoft Excel Sheet <a href="../PowerBudgetMateoDelgado-Individual.xlsx"><em>here</em></a>.</p>
+<p>The power budget as a PDF download is available <a href="../powerrevised.pdf"><em>here</em></a>, and a Microsoft Excel Sheet <a href="../PowerBudgetMateoDelgado-Individual2.xlsx"><em>here</em></a>.</p>
 
 
 

@@ -842,27 +842,34 @@
 <p></p><center>
 <font size="6">Mateo Delgado Datasheet</font><br>
 as part of<br>
-<font size="8"> XXX</font><br>
+<font size="8"> RadioLink</font><br>
 for<br>
 <font size="5"> Team 105 </font><br><p></p>
-<p><strong>Submission: 09/02/2026</strong>
+<p><strong>Submission: 10/29/2026</strong> <br>
+<a href="https://asu-egr304-2026-f-105.github.io/EGR304-2026-F-105.github.io/">RadioLink Main Website</a><br>
 </p></center><p></p>
 <h2 id="introduction">Introduction</h2>
 <ul>
-<li>This needs to be updated so that a reader gets an idea of the purpose of this datasheet.</li>
+<li>This datasheet documents the design of my individual subsystem for the Team 105 embedded systems project, from block diagram and component selection through schematic, power budget, PCB, and testing. It records the engineering decisions behind my portion of the system so it can be understood, reproduced, and evaluated.</li>
 </ul>
 <h3 id="project-summary">Project Summary</h3>
 <ul>
-<li>This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.</li>
-<li>Add context that ties into the link to your <a href="https://embedded-systems-design.github.io/EGR304TeamTemplate/">team report.</a></li>
+<li>Team 105 is developing RadioLink, a portable, off-grid communication device for when cellular or internet service is unavailable. Each team member builds one subsystem around a PIC18F57Q43 Curiosity Nano, and the boards connect through standardized connectors with a shared ground.</li>
+<li>My subsystem is audio input. A CMC-6027-24T electret microphone captures the user’s voice, and an MCP6004 amplifier stage boosts the signal for the PIC’s analog-to-digital converter. The board runs from a single 3.3 V supply.</li>
 </ul>
 <h3 id="my-contribution">My Contribution</h3>
 <ul>
-<li>This needs to be updated to reflect a team introduction</li>
-<li>Content should also help an unfamiliar reader navigate to areas of interest. Information like:</li>
+<li>I am responsible for the microphone subsystem: selecting the components, designing the amplifier circuit, and creating the schematic, PCB, power budget, and test features. The board includes a UART header, a pushbutton, and a test LED to support debugging.</li>
+<li>The following sections cover the block diagram, component selection, bill of materials, schematic, power budget, PCB design, and verification results.</li>
 </ul>
-<p>To review the details listed of the material used to construct the subsection, you can review it in the <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/03-BOM/BOM/">"BOM"</a> section of the datasheet.</p>
-<p>For all the sections</p>
+<p>As well as the drop down in the top left for each section. ## Explore This Datasheet</p>
+<ul>
+<li><a href="C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\01-Block-Diagram">Block Diagram</a></li>
+<li><a href="C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\02-Component-Selection">Component Selection</a></li>
+<li><a href="C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\03-BOM">Bill of Materials</a></li>
+<li><a href="C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\04-Schematic">Schematic</a></li>
+<li><a href="C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\05-Power-Budget">Power Budget</a></li>
+</ul>
 
 
 
