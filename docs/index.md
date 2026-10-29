@@ -29,10 +29,9 @@ for<br>
 * I am responsible for the microphone subsystem: selecting the components, designing the amplifier circuit, and creating the schematic, PCB, power budget, and test features. The board includes a UART header, a pushbutton, and a test LED to support debugging.
 * The following sections cover the block diagram, component selection, bill of materials, schematic, power budget, PCB design, and verification results.
 
-As well as the drop down in the top left for each section. ## Explore This Datasheet
-
-* [Block Diagram](C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\01-Block-Diagram)
-* [Component Selection](C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\02-Component-Selection)
-* [Bill of Materials](C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\03-BOM)
-* [Schematic](C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\04-Schematic)
-* [Power Budget](C:\Users\mateo_1j2xewk\Documents\GitHub\mdelga66.github.io\docs\05-Power-Budget)
+### Explore:
+* [Block Diagram](https://mdelga66.github.io/01-Block-Diagram/Block-Diagram/)
+* [Component Selection](https://mdelga66.github.io/02-Component-Selection/Component-Selection/)
+* [Bill of Materials](https://mdelga66.github.io/03-BOM/BOM/)
+* [Schematic](https://mdelga66.github.io/04-Schematic/schematic/)
+* [Power Budget](https://mdelga66.github.io/05-Power-Budget/Power-Budget/)
