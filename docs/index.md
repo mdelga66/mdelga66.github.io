@@ -12,7 +12,7 @@ for<br>
 <font size= "5"> Team 105 </font><br>
 
 **Submission: 10/29/2026** <br>
-[RadioLink Main Website](https://asu-egr304-2026-f-105.github.io/EGR304-2026-F-105.github.io/)<br>
+[RadioLink Team Website](https://asu-egr304-2026-f-105.github.io/EGR304-2026-F-105.github.io/)<br>
 </center>
 
 ## Introduction
