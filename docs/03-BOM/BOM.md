@@ -50,4 +50,3 @@ The Bill of Materials below lists the components required for my subsystem. Comp
 ![](Mateo_Delgado_BOM.png){style width: "2000"}
 **Figure 2:** Bill of Materials as a screenshot.
 
-As you can see, the text can be difficult to read without opening the image.
