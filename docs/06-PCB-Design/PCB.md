@@ -19,12 +19,13 @@ Components are arranged logically to separate noisy digital switching circuits f
 * **Manufacturing Details:** To meet submission criteria, custom footprint pad mappings were fully matched with their schematic pin configurations. Large, bold initials (**MD**) are permanently etched directly into the copper on the top layer (`F.Cu`) for unmistakable board identification. Test points are left fully accessible to facilitate rapid probing of the 5V, GND, VB, MIC_OUT, and ADC_IN nodes.
 
 **PCB Layout Top and Bottom**
+
 ![PCB Layout Top and Bottom](PCBfcu.png){style="width: 350px; height: 300px;"}
 ![PCBbcu.png](PCBbcu.png){style="width: 350px; height: 300px;"}
 ![PCBbcu.png](pcb1.png){style="width: 350px; height: 300px;"}
 ## Resources
 
 The manufacturing files and layout plots are available for download below:
-* fcu and bcu PDFs: [*F.cu*](pcbfcu2.pdf) [*B.cu*](pcbbcu1.pdf)
-* Gerbers and the drill [*here*](GERBERS.zip)
+* *fcu and bcu PDFs:* [*F.cu*](pcbfcu2.pdf) [*B.cu*](pcbbcu1.pdf)
+* *Gerbers and the drill* [*here*](GERBERS.zip)
 
