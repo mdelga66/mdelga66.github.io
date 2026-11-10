@@ -15,9 +15,9 @@ The output goes through a 4.7k resistor and a 10 nanofarad capacitor. That’s a
 The 8-pin header (J2) connects to Sultan’s system: RX on pin 1 (RA1), TX on pin 2 (RB2), and ground on pin 8, matching our block diagram. Pins 3 through 7 are not connected. A second header (J4) breaks out spare GPIO (RC6, RD4, RA3, RA4) with 5 volts and ground. The (un)mute button on RC4 pulls the pin to ground, and the debugging LED on RC5 has a 300 ohm resistor. I added test points for 5 volts, ground, VB, MIC_OUT and ADC_IN, put no-connect flags on every unused pin, and ran KiCad’s electrical rules check to catch mistakes.
 
 
-![schematic](schm1.png){style width:"350" height:"300;"}
+![schematic](schm5.png){style width:"350" height:"300;"}
 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](schm1.pdf) and the Zip folder of the project [*here*](IndividualSubSystem.zip).
+The schematic as a PDF download is available [*here*](schm5.pdf) and the Zip folder of the project [*here*](MateoDelgadoTeam105.zip).
