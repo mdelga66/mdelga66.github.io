@@ -831,7 +831,7 @@
 
   <h1>Component Selection</h1>
 
-<p>*Table 1: DAC Component Selection</p>
+<p><em>Table 1: DAC Component Selection</em></p>
 <p><strong>Digital-to-Analog Converter (DAC) — Individual Subsystem</strong></p>
 <table>
 <thead>
@@ -843,19 +843,24 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../pic.png" data-desc-position="bottom"><img alt="" src="../pic.png"></a><br>Option 1.<br> PIC18F57Q43 Internal 8-bit DAC<br>No additional cost<br><a href="https://www.microchip.com/en-us/product/pic18f57q43">Link to product</a></td>
-<td>* No additional cost<br>* 8-bit output enough for speech<br>* No SPI Communication required</td>
-<td>* No Dedicated High-Resolution Audio ADC<br>* Limited Processing Horsepower for DSP<br>* RAM Constraints for Audio Buffering</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../pic.png" data-desc-position="bottom"><img alt="" src="../pic.png"></a><br>* Option 1. <br>* PIC18F57Q43 Internal 8-bit DAC<br>* No additional cost<br>* <a href="https://www.microchip.com/en-us/product/pic18f57q43">Link to product</a></td>
+<td>* No additional cost<br>* 8-bit output enough for speech<br>* No SPI communication required</td>
+<td>* Only 8-bit resolution<br>* Limited processing horsepower for DSP<br>* RAM constraints for audio buffering</td>
 </tr>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../dacoption2.jpg" data-desc-position="bottom"><img alt="" src="../dacoption2.jpg"></a><br>* Option 2. <br>* Texas Instruments DAC7512 <br>* $7/each <br>* <a href="https://www.ti.com/product/DAC7512">Link to product</a></td>
-<td>* Excellent Audio Fidelity (12-Bit Resolution)<br>* Rapid Serial Communication (Up to 30 MHz) <br> * Glitch-Free Power-On Initialization</td>
-<td>* More expensive <br>* No Breadboard-Friendly DIP Packages<br> * Requires a Completely Custom Software Driver</td>
+<td>* Excellent audio fidelity (12-bit resolution)<br>* Rapid serial communication (up to 30 MHz)<br>* Glitch-free power-on initialization</td>
+<td>* More expensive<br>* No breadboard-friendly DIP package<br>* Requires a completely custom software driver</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="dacoption3.jpg" data-desc-position="bottom"><img alt="" src="dacoption3.jpg"></a><br>* Option 3. <br>* Microchip MCP4725 12-bit I2C DAC<br>* Low cost (verify price)<br>* <a href="https://www.microchip.com/en-us/product/mcp4725">Link to product</a></td>
+<td>* 12-bit resolution<br>* Runs from 2.7 V to 5.5 V, compatible with the 5 V supply<br>* Simple two-wire I2C interface<br>* Built-in EEPROM remembers its last output setting</td>
+<td>* Costs more than the internal DAC<br>* Needs an I2C driver and extra wiring<br>* I2C speed limits how fast samples can be updated</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 2: Texas Instruments DAC7512</p>
-<p><strong>Rationale:</strong> The PIC18F57Q43's internal 8-bit DAC is the best fit for this project. We already own the microcontroller board, so using its built-in peripheral adds no cost and no shipping or lead-time risk. Eight bits is sufficient for speech-quality audio, and the on-chip DAC removes the need for an SPI driver and extra wiring, which keeps both the firmware and the board layout simple. The DAC7512 would offer higher resolution (12-bit) and a buffered output, but that improvement is not needed for voice, and it would add cost, a custom driver, and delivery delays. The main tradeoff is a higher quantization noise floor, which is acceptable for this application.</p>
+<p><strong>Choice:</strong> Option 1: PIC18F57Q43 Internal 8-bit DAC</p>
+<p><strong>Rationale:</strong> The PIC18F57Q43's internal 8-bit DAC is the best fit for this project. We already own the microcontroller board, so using its built-in peripheral adds no cost and no shipping or lead-time risk. Eight bits is sufficient for speech-quality audio, and the on-chip DAC removes the need for an SPI or I2C driver and extra wiring, which keeps both the firmware and the board layout simple. The DAC7512 and MCP4725 would offer higher resolution (12-bit), but that improvement is not needed for voice, and either one would add cost, a custom driver, and delivery delays. The main tradeoff is a higher quantization noise floor, which is acceptable for this application.</p>
 <p><em>Table 2: Microphone Component Selection</em></p>
 <p><strong>Microphone — Individual Subsystem</strong></p>
 <table>
@@ -869,7 +874,7 @@
 <tbody>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../mic1.jpg" data-desc-position="bottom"><img alt="" src="../mic1.jpg"></a><br>* Option 1. <br>* CUI Devices CMC-6027-24T Electret Microphone<br>* Low cost (verify price)<br>* <a href="https://www.cuidevices.com/product/audio/microphones/electret-condenser-microphones/cmc-6027-24t">Link to product</a></td>
-<td>* Low cost<br>* Small 6 mm through-hole form factor<br>* Analog output works directly with the PIC's ADC<br>* Simple to prototype and solder</td>
+<td>* Low cost<br>* Small 6 mm through-hole form factor<br>* Analog output works directly with the PIC's ADC<br>* Simple to prototype and solder<br>* Can be biased from the 5 V supply</td>
 <td>* Output signal is very small and needs amplification<br>* Needs a bias resistor and DC-blocking capacitor<br>* Analog signal is susceptible to noise</td>
 </tr>
 <tr>
@@ -877,10 +882,15 @@
 <td>* Built-in amplifier with automatic gain control<br>* Higher output level, so less external circuitry<br>* Ready to use on a breadboard</td>
 <td>* More expensive<br>* Automatic gain control can distort or pump the audio<br>* Hides the amplifier stage we are supposed to design</td>
 </tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="mic3.jpg" data-desc-position="bottom"><img alt="" src="mic3.jpg"></a><br>* Option 3. <br>* Knowles SPU0410LR5H-QB Analog MEMS Microphone<br>* Moderate cost (verify price)<br>* <a href="https://www.digikey.co.uk/en/products/detail/syntiant/SPU0410LR5H-QB/2420983">Link to product</a></td>
+<td>* Very small and consistent from part to part<br>* Built-in preamplifier, so a larger output signal<br>* Low noise and flat frequency response</td>
+<td>* Surface-mount only, which does not fit our through-hole PCB<br>* Supply voltage is limited to about 3.6 V, below our 5 V rail<br>* More expensive than an electret capsule</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> Option 1: CUI Devices CMC-6027-24T Electret Microphone</p>
-<p><strong>Rationale:</strong> The CMC-6027-24T is selected because it is inexpensive, small, and gives a plain analog signal that the PIC18F57Q43's ADC can read once it is amplified. Its output is small, so it pairs with the MCP6004 amplifier stage in the next table, and the extra bias and coupling components are cheap and easy to add. The MAX9814 breakout is more convenient, but it costs more and its built-in gain stage would replace the amplifier circuit that this subsystem is meant to design. The main tradeoff is added circuit complexity and noise sensitivity, which we address with proper decoupling and filtering before the ADC input.</p>
+<p><strong>Rationale:</strong> The CMC-6027-24T is selected because it is inexpensive, small, and gives a plain analog signal that the PIC18F57Q43's ADC can read once it is amplified. It is a through-hole part, so it fits our PCB, and it can be biased directly from the 5 V rail. Its output is small, so it pairs with the MCP6004 amplifier stage in the next table, and the extra bias and coupling components are cheap and easy to add. The MAX9814 breakout is more convenient, but it costs more and its built-in gain stage would replace the amplifier circuit that this subsystem is meant to design. The MEMS microphone is compact and quiet, but it is surface-mount only and cannot run from our 5 V rail without extra circuitry. The main tradeoff of the electret is added circuit complexity and noise sensitivity, which we address with proper decoupling and filtering before the ADC input.</p>
 <p><em>Table 3: Amplifier Component Selection</em></p>
 <p><strong>Operational Amplifier — Individual Subsystem</strong></p>
 <table>
@@ -894,18 +904,53 @@
 <tbody>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../amp1.jpg" data-desc-position="bottom"><img alt="" src="../amp1.jpg"></a><br>* Option 1. <br>* Microchip MCP6004 Quad Op Amp<br>* Low cost (verify price)<br>* <a href="https://www.microchip.com/en-us/product/mcp6004">Link to product</a></td>
-<td>* Rail-to-rail input and output<br>* Runs from 1.8 V to 6 V, compatible with the 3.3 V supply<br>* Low power consumption<br>* Spare op amps available for filtering</td>
+<td>* Rail-to-rail input and output<br>* Runs from 1.8 V to 6 V, compatible with the 5 V supply<br>* Low power consumption<br>* Spare op amps available for buffering the half-supply reference</td>
 <td>* Gain-bandwidth of about 1 MHz limits very high gain<br>* Four amplifiers in one package, so most go unused<br>* Higher input noise than precision audio op amps</td>
 </tr>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../amp2.jpg" data-desc-position="bottom"><img alt="" src="../amp2.jpg"></a><br>* Option 2. <br>* Texas Instruments LM358 Dual Op Amp<br>* Low cost (verify price)<br>* <a href="https://www.ti.com/product/LM358">Link to product</a></td>
 <td>* Very common and easy to find<br>* Through-hole DIP package is breadboard-friendly<br>* Wide supply range</td>
-<td>* Output cannot swing to the positive rail<br>* Poor performance at a 3.3 V supply<br>* Higher power consumption</td>
+<td>* Output cannot swing to the positive rail, wasting part of the ADC range on a 5 V supply<br>* Not rail-to-rail, so it handles a single-supply audio signal poorly<br>* Higher power consumption</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="amp3.jpg" data-desc-position="bottom"><img alt="" src="amp3.jpg"></a><br>* Option 3. <br>* Texas Instruments TLV9001 Single Op Amp<br>* Low cost (verify price)<br>* <a href="https://www.ti.com/product/TLV9001">Link to product</a></td>
+<td>* Rail-to-rail input and output<br>* Runs from 1.8 V to 5.5 V, compatible with the 5 V supply<br>* Low power consumption</td>
+<td>* Single amplifier, so there are no spares to buffer the half-supply reference<br>* Only available in surface-mount packages, which does not fit our through-hole PCB<br>* Gain-bandwidth of about 1 MHz limits very high gain</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> Option 1: Microchip MCP6004 Quad Op Amp</p>
-<p><strong>Rationale:</strong> The MCP6004 is selected because it operates from the same 3.3 V supply as the PIC18F57Q43 and has rail-to-rail input and output, so the amplified microphone signal can use the full 0 to 3.3 V range of the ADC. Its low power draw suits a small battery-style design, and the extra amplifiers in the package give us room to add a filter stage if needed. The LM358 is easier to find in a DIP package, but its output cannot reach the supply rails and it does not perform well at 3.3 V. The tradeoff is a modest gain-bandwidth product, which is more than enough for speech frequencies.</p>
+<p><strong>Rationale:</strong> The MCP6004 is selected because it runs from the same 5 V rail as the rest of the subsystem and has rail-to-rail input and output, so the amplified microphone signal can use the full 0 to 5 V range of the ADC around the 2.5 V half-supply reference. Its low power draw suits a small design, and the extra amplifiers in the package are used as buffers on the half-supply reference so they do not pick up noise. The LM358 is easier to find in a DIP package, but its output cannot reach the positive rail. The TLV9001 has similar electrical performance, but it is a single amplifier in a surface-mount package only. The tradeoff is a modest gain-bandwidth product, which is more than enough for speech frequencies.</p>
+<p><em>Table 4: Voltage Regulator Component Selection</em></p>
+<p><strong>Voltage Regulator — Individual Subsystem</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Solution</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="reg1.jpg" data-desc-position="bottom"><img alt="" src="reg1.jpg"></a><br>* Option 1. <br>* onsemi MC7805CTG 5 V Linear Regulator (TO-220)<br>* Low cost (verify price)<br>* <a href="https://www.arrow.com/en/products/mc7805ctg/on-semiconductor">Link to product</a></td>
+<td>* Fixed 5 V output with no adjustment needed<br>* Accepts a 9 V wall adapter (input up to 35 V)<br>* Delivers up to 1 A<br>* Through-hole package fits our PCB<br>* Built-in thermal overload and current limiting</td>
+<td>* Dropout of about 2 V, so it needs at least 7 V in<br>* Wastes the voltage difference as heat<br>* Bulkier than newer low-dropout parts</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="reg2.jpg" data-desc-position="bottom"><img alt="" src="reg2.jpg"></a><br>* Option 2. <br>* Texas Instruments TLV761 (5.0 V fixed-output version)<br>* Low cost (verify price)<br>* <a href="https://www.ti.com/product/TLV761">Link to product</a></td>
+<td>* Input voltage up to 18 V, so a 9 V adapter works<br>* Delivers up to 1 A<br>* Low dropout, about 0.9 V typical at 1 A<br>* Low quiescent current, about 60 µA<br>* ±1% output accuracy<br>* Stable with a 1 µF ceramic output capacitor</td>
+<td>* Surface-mount only (SOT-223 or TO-252), which does not fit our through-hole PCB<br>* The 5.0 V version must be ordered specifically<br>* Harder to hand-solder than a TO-220</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="reg3.jpg" data-desc-position="bottom"><img alt="" src="reg3.jpg"></a><br>* Option 3. <br>* LM2940-5.0 Low-Dropout 5 V Regulator<br>* Moderate cost (verify price)<br>* <a href="https://www.ti.com/product/LM2940-N">Link to product</a></td>
+<td>* Very low dropout, about 0.5 V<br>* Delivers up to about 1 A<br>* Wide input voltage range</td>
+<td>* More expensive<br>* Requires an output capacitor of at least 22 µF with controlled ESR<br>* More demanding to lay out</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice:</strong> Option 1: onsemi MC7805CTG 5 V Linear Regulator</p>
+<p><strong>Rationale:</strong> The MC7805CTG is selected because the whole subsystem runs from a single 5 V rail, and the unregulated 9 V DC wall adapter plugs into a barrel jack and gives it plenty of headroom above the regulator's 2 V dropout. It is a through-hole TO-220 part, so it matches our PCB, and it needs only a small input and output capacitor. The subsystem draws well under 100 mA, so the heat wasted dropping 9 V to 5 V is small and no heat sink is needed. The TLV761 and LM2940 have lower dropout and better efficiency, but we do not need that with a 9 V source, and the TLV761 is surface-mount only, which does not fit our through-hole PCB. The tradeoff of the MC7805CTG is the wasted power as heat, which is acceptable at this current.</p>
 
 
 
