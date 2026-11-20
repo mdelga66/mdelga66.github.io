@@ -883,7 +883,7 @@
 <td>* More expensive<br>* Automatic gain control can distort or pump the audio<br>* Hides the amplifier stage we are supposed to design</td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="mic3.jpg" data-desc-position="bottom"><img alt="" src="mic3.jpg"></a><br>* Option 3. <br>* Knowles SPU0410LR5H-QB Analog MEMS Microphone<br>* Moderate cost (verify price)<br>* <a href="https://www.digikey.co.uk/en/products/detail/syntiant/SPU0410LR5H-QB/2420983">Link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../mic3.png" data-desc-position="bottom"><img alt="" src="../mic3.png"></a><br>* Option 3. <br>* Knowles SPU0410LR5H-QB Analog MEMS Microphone<br>* Moderate cost (verify price)<br>* <a href="https://www.digikey.co.uk/en/products/detail/syntiant/SPU0410LR5H-QB/2420983">Link to product</a></td>
 <td>* Very small and consistent from part to part<br>* Built-in preamplifier, so a larger output signal<br>* Low noise and flat frequency response</td>
 <td>* Surface-mount only, which does not fit our through-hole PCB<br>* Supply voltage is limited to about 3.6 V, below our 5 V rail<br>* More expensive than an electret capsule</td>
 </tr>
@@ -913,7 +913,7 @@
 <td>* Output cannot swing to the positive rail, wasting part of the ADC range on a 5 V supply<br>* Not rail-to-rail, so it handles a single-supply audio signal poorly<br>* Higher power consumption</td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="amp3.jpg" data-desc-position="bottom"><img alt="" src="amp3.jpg"></a><br>* Option 3. <br>* Texas Instruments TLV9001 Single Op Amp<br>* Low cost (verify price)<br>* <a href="https://www.ti.com/product/TLV9001">Link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../amp3.png" data-desc-position="bottom"><img alt="" src="../amp3.png"></a><br>* Option 3. <br>* Texas Instruments TLV9001 Single Op Amp<br>* Low cost (verify price)<br>* <a href="https://www.ti.com/product/TLV9001">Link to product</a></td>
 <td>* Rail-to-rail input and output<br>* Runs from 1.8 V to 5.5 V, compatible with the 5 V supply<br>* Low power consumption</td>
 <td>* Single amplifier, so there are no spares to buffer the half-supply reference<br>* Only available in surface-mount packages, which does not fit our through-hole PCB<br>* Gain-bandwidth of about 1 MHz limits very high gain</td>
 </tr>
@@ -933,17 +933,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="reg1.jpg" data-desc-position="bottom"><img alt="" src="reg1.jpg"></a><br>* Option 1. <br>* onsemi MC7805CTG 5 V Linear Regulator (TO-220)<br>* Low cost (verify price)<br>* <a href="https://www.arrow.com/en/products/mc7805ctg/on-semiconductor">Link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../reg1.png" data-desc-position="bottom"><img alt="" src="../reg1.png"></a><br>* Option 1. <br>* onsemi MC7805CTG 5 V Linear Regulator (TO-220)<br>* Low cost (verify price)<br>* <a href="https://www.arrow.com/en/products/mc7805ctg/on-semiconductor">Link to product</a></td>
 <td>* Fixed 5 V output with no adjustment needed<br>* Accepts a 9 V wall adapter (input up to 35 V)<br>* Delivers up to 1 A<br>* Through-hole package fits our PCB<br>* Built-in thermal overload and current limiting</td>
 <td>* Dropout of about 2 V, so it needs at least 7 V in<br>* Wastes the voltage difference as heat<br>* Bulkier than newer low-dropout parts</td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="reg2.jpg" data-desc-position="bottom"><img alt="" src="reg2.jpg"></a><br>* Option 2. <br>* Texas Instruments TLV761 (5.0 V fixed-output version)<br>* Low cost (verify price)<br>* <a href="https://www.ti.com/product/TLV761">Link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../reg2.png" data-desc-position="bottom"><img alt="" src="../reg2.png"></a><br>* Option 2. <br>* Texas Instruments TLV761 (5.0 V fixed-output version)<br>* Low cost (verify price)<br>* <a href="https://www.ti.com/product/TLV761">Link to product</a></td>
 <td>* Input voltage up to 18 V, so a 9 V adapter works<br>* Delivers up to 1 A<br>* Low dropout, about 0.9 V typical at 1 A<br>* Low quiescent current, about 60 µA<br>* ±1% output accuracy<br>* Stable with a 1 µF ceramic output capacitor</td>
 <td>* Surface-mount only (SOT-223 or TO-252), which does not fit our through-hole PCB<br>* The 5.0 V version must be ordered specifically<br>* Harder to hand-solder than a TO-220</td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="reg3.jpg" data-desc-position="bottom"><img alt="" src="reg3.jpg"></a><br>* Option 3. <br>* LM2940-5.0 Low-Dropout 5 V Regulator<br>* Moderate cost (verify price)<br>* <a href="https://www.ti.com/product/LM2940-N">Link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../reg3.png" data-desc-position="bottom"><img alt="" src="../reg3.png"></a><br>* Option 3. <br>* LM2940-5.0 Low-Dropout 5 V Regulator<br>* Moderate cost (verify price)<br>* <a href="https://www.ti.com/product/LM2940-N">Link to product</a></td>
 <td>* Very low dropout, about 0.5 V<br>* Delivers up to about 1 A<br>* Wide input voltage range</td>
 <td>* More expensive<br>* Requires an output capacitor of at least 22 µF with controlled ESR<br>* More demanding to lay out</td>
 </tr>
