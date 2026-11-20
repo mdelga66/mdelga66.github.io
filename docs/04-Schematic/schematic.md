@@ -4,7 +4,7 @@ title: Schematic
 
 ## Overview
 
-Starting with power: a 9 volt barrel jack feeds an LM7805 regulator through a 1 amp fuse and a jumper (JP1) that lets me disconnect power. Capacitors on the regulator’s input and output, plus a 1k load resistor on the output, give a clean 5 volts. That 5 volts feeds the Nano’s VTG pin, with a 0.1 microfarad capacitor next to it, and the VBUS pin is left unconnected. Everything runs from this single 5 volt rail, including the PIC, the mic, and the op amp. Because the PIC’s supply is also 5 volts, the ADC range is 0 to 5 volts, so the op amp output can’t go above what RA0 can handle.
+Starting with power: a 9 volt DC wall adapter plugs into a barrel jack (J1) and feeds an LM7805 5 volt regulator through a 1 amp fuse and a jumper (JP1) that lets me disconnect power. Capacitors on the regulator’s input and output, plus a 1k load resistor on the output, give a clean 5 volts. That 5 volts feeds the Nano’s VTG pin, with a 0.1 microfarad capacitor next to it, and the VBUS pin is left unconnected. Everything runs from this single 5 volt rail, including the PIC, the mic, and the op amp. Because the PIC’s supply is also 5 volts, the ADC range is 0 to 5 volts, so the op amp output can’t go above what RA0 can handle.
 
 For the mic, a 2.2k resistor from 5 volts biases it. A 1 microfarad capacitor blocks DC and passes only the sound. Because I only have a single supply, I build a half-supply reference of about 2.5 volts, called VB, with two 10k resistors and a 10 microfarad capacitor. A 100k resistor ties the op amp input to VB.
 
@@ -15,9 +15,9 @@ The output goes through a 4.7k resistor and a 10 nanofarad capacitor. That’s a
 The 8-pin header (J2) connects to Sultan’s system: RX on pin 1 (RA1), TX on pin 2 (RB2), and ground on pin 8, matching our block diagram. Pins 3 through 7 are not connected. A second header (J4) breaks out spare GPIO (RC6, RD4, RA3, RA4) with 5 volts and ground. The (un)mute button on RC4 pulls the pin to ground, and the debugging LED on RC5 has a 300 ohm resistor. I added test points for 5 volts, ground, VB, MIC_OUT and ADC_IN, put no-connect flags on every unused pin, and ran KiCad’s electrical rules check to catch mistakes.
 
 
-![schematic](schm5.png){style width:"350" height:"300;"}
+![schematic](rev6schematic.png){style width:"350" height:"300;"}
 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](schm5.pdf) and the Zip folder of the project [*here*](MateoDelgadoTeam105.zip).
+The schematic as a PDF download is available [*here*](rev6schematic.pdf) and the Zip folder of the project [*here*](MateoDelgadoTeam105.zip).

@@ -22,7 +22,7 @@ Components are arranged logically to separate noisy digital switching circuits f
 
 ![PCB Layout Top and Bottom](PCBfcu.png){style="width: 350px; height: 300px;"}
 ![PCBbcu.png](PCBbcu.png){style="width: 350px; height: 300px;"}
-![PCBbcu.png](pcb1.png){style="width: 350px; height: 300px;"}
+![PCBbcu.png](pcbrevised.png){style="width: 350px; height: 300px;"}
 ## Resources
 
 The manufacturing files and layout plots are available for download below:
